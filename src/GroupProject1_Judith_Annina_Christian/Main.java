@@ -60,6 +60,15 @@ public class Main {
                                   {"Mrs. Absolute", "Mrs. King","Mrs.Lord", "Mrs.Onpoint"},
                                   {"Mr. Lord", "Mrs. Allknows", "Mr. Happy", "Mr. Dark"}}};
 
+        String [][][] sched1b = {{{"English", "Biology", "PhyEdu", "Art"},
+                                {"Geography", "Biology", "Physics", "Art"},
+                                {"Physics", "Geography", "English", "Math"},
+                                {"Biology", "Physics", "Art", "Math"}},
+                                {{"Mrs. Absolute", "Mrs. King","Mrs.Lord", "Mrs.Onpoint"},
+                                {"Mr.Dark", "Mrs.Golightly","Mr. Sure","Mr.Strong"},
+                                {"Mr. Lord", "Mrs. Allknows", "Mr. Happy", "Mr. Dark"},
+                                {"Mr.Nothappy","Mr. Just", "Mrs. Onpoint", "Mr. Brilliant"}}};
+
         
     }
 }
