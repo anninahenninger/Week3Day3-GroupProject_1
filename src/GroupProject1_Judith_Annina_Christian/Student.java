@@ -5,9 +5,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Student {
-    private ArrayList<Subject> subjects;
-    private HashMap<Subject, String> grades;
-    private HashMap<Subject, Integer> points;
+    private ArrayList<String> subjects;
+    private HashMap<String, String> grades;
+    private HashMap<String, Integer> points;
     private String email;
     private String name;
     private String mommy;
@@ -15,7 +15,7 @@ public class Student {
     private int age;
     private String avgGrade;
 
-    public Student(String name, int age, ArrayList<Subject> subjects, String email, String mommy,
+    public Student(String name, int age, ArrayList<String> subjects, String email, String mommy,
                    String daddy){
         this.name = name;
         this.age = age;
@@ -26,12 +26,12 @@ public class Student {
         this.grades = new HashMap<>();
         this.avgGrade = setAvgGrade();
     }
-    public Student(HashMap<Subject, Integer> points){
+    public Student(HashMap<String, Integer> points){
         this.points = points;
     }
     private void setGrade(){
         String actGrade = "";
-        for(Map.Entry<Subject, Integer> entry : points.entrySet()) {
+        for(Map.Entry<String, Integer> entry : points.entrySet()) {
             if (entry.getValue() > 90) {
                 actGrade = "A";
             }
@@ -57,7 +57,7 @@ public class Student {
         int totalPts = 0;
         int avgPts = 0;
         String actGrade = "";
-        for (Map.Entry<Subject, Integer> entry : points.entrySet()) {
+        for (Map.Entry<String, Integer> entry : points.entrySet()) {
             totalPts += entry.getValue();
             avgPts = avgPts / points.size();
             if (avgPts > 90) {

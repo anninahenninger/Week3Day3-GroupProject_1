@@ -1,42 +1,15 @@
 package GroupProject1_Judith_Annina_Christian;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class Main {
 
     public static void main(String[] args) {
-        Subject s1 = new Subject("Math");
-        Subject s2 = new Subject("English");
-        Subject s3 = new Subject("Biology");
-        Subject s4 = new Subject("Geography");
-        Subject s5 = new Subject("Physics");
-        Subject s6 = new Subject("Art");
-        Subject s7 = new Subject("Physical Education");
-        Subject s8 = new Subject("French");
-        Subject s9 = new Subject("History");
 
-        Subject [] subDark = {s1,s5};
-        Subject [] subGolight={s2};
-        Subject [] subJust={s8};
-        Subject [] subHappy={s2};
-        Subject [] subGlorious={s2};
-        Subject [] subBrilliant={s2};
-        Subject [] subAbsolute={s2};
-        Subject [] subKing={s2};
-        Subject [] subAllknows={s2};
-        Subject [] subOnpoint={s2};
-        Subject [] subStrong={s2};
-        Subject [] subNothappy={s2};
-        Subject [] subStrong={s2};
-        Subject [] subNothappy={s2};
-        Subject [] subSure={s2};
-
-
-
-
-
-
-        Teacher t1 = new Teacher("Mr. Dark",subDark);
-        Teacher t2 = new Teacher("Mrs. Golightly",subGolight);
-        Teacher t3 = new Teacher("Mr. Just",subJust);
+        Teacher t1 = new Teacher("Mr. Dark", new String[]{"Math", "Biology", "Physics"});
+        Teacher t2 = new Teacher("Mrs. Golightly",);
+        Teacher t3 = new Teacher("Mr. Just",);
         Teacher t4 = new Teacher("Mr. Happy", );
         Teacher t5 = new Teacher("Mr. Gloriuous", );
         Teacher t6 = new Teacher("Mr. Brilliant", );
@@ -49,10 +22,19 @@ public class Main {
         Teacher t13 = new Teacher("Mr. Nothappy", );
         Teacher t14 = new Teacher("Mr. Sure", );
 
+        String[] subjects = {"Math", "English", "Biology", "Geography", "Physics", "Art", "PhyEdu"};
 
-        Student st1 = new Student("Benni", 7, )
+        HashMap<String, Integer> pointsSt1 = new HashMap<>();
+        pointsSt1.put("Math",78);
+        pointsSt1.put("English",78);
+        pointsSt1.put("Biology",78);
+        pointsSt1.put("Geography",78);
+        pointsSt1.put("Physics",78);
+        pointsSt1.put("Art",78);
+        pointsSt1.put("PhyEdu",78);
 
-        Classroom a1 = new Classroom ("1a",)
-        System.out.println("Hello World!");
+        Student st1 = new Student("Benni", 7, new subjects, "benniParents@email.com", "Ada Cool", "Adam Cool");
+
+
     }
 }
