@@ -50,12 +50,12 @@ public class Main {
         pointsSt1_1st.put("PhyEdu",1);
 
         HashMap<String, Integer> pointsSt1_2nd = new HashMap<>();
-        pointsSt1_2nd.put("Math",81);
+        pointsSt1_2nd.put("Math",99);
         pointsSt1_2nd.put("English",72);
-        pointsSt1_2nd.put("Biology",90);
+        pointsSt1_2nd.put("Biology",40);
         pointsSt1_2nd.put("Geography",63);
         pointsSt1_2nd.put("Physics",94);
-        pointsSt1_2nd.put("Art",2);
+        pointsSt1_2nd.put("Art",4);
         pointsSt1_2nd.put("PhyEdu",1);
 
         String [][][] sched1a = {{{"Math", "English", "Biology", "PhyEdu","PhyEdu"},
@@ -78,8 +78,11 @@ public class Main {
 
         Student st1 = new Student("Benni", 7, Student.Classroom.A1, sched1a, pointsSt1_1st,
                 "benniParents@email.com", "Ada Cool", "Adam Cool");
-        
 
-        st1.printSchedule();
+        st1.setPoints_2nd(pointsSt1_2nd);
+
+        //st1.printSchedule();
+        st1.printReport(2);
+        st1.printAvgGradeOfSemester(2);
     }
 }

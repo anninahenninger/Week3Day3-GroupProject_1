@@ -1,6 +1,5 @@
 package GroupProject1_Judith_Annina_Christian;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,26 +9,33 @@ public class Student {
     private int age;
     private Classroom aClassroom;
     private String[][][] schedule;
-    private HashMap<String, Integer> points;
+    private HashMap<String, Integer> points_1st;
+    private HashMap<String, Integer> points_2nd;
     private String email;
     private String mommy;
     private String daddy;
-    private HashMap<String, String> grades;
-    private String avgGrade = "";
+    private HashMap<String, String> grades_1st;
+    private HashMap<String, String> grades_2nd;
+    private String avgGrade_1st = "";
+    private String avgGrade_2nd = "";
 
-    public Student(String name, int age, Classroom aClassroom, String[][][] schedule, HashMap<String, Integer> points,
+    public Student(String name, int age, Classroom aClassroom, String[][][] schedule, HashMap<String, Integer> points_1st,
                    String email, String mommy, String daddy){
         this.name = name;
         this.age = age;
         this.aClassroom = aClassroom;
         this.schedule = schedule;
-        this.points = points;
+        this.points_1st = points_1st;
         this.email = email;
         this.mommy = mommy;
         this.daddy = daddy;
-        this.grades = new HashMap<>();
-        setGrade();
-        this.avgGrade = setAvgGrade();
+        this.grades_1st = new HashMap<>();
+        setGrade_1st();
+        this.points_2nd = new HashMap<>();
+        this.grades_2nd = new HashMap<>();
+        setGrade_2nd();
+        this.avgGrade_1st = setAvgGrade(this.points_1st);
+        this.avgGrade_2nd = setAvgGrade(this.points_2nd);
     }
 
     public void printSchedule(){
@@ -53,9 +59,9 @@ public class Student {
         }
     }
 
-    private void setGrade(){
+    private void setGrade_1st(){
         String actGrade = "";
-        for(Map.Entry<String, Integer> entry : points.entrySet()) {
+        for(Map.Entry<String, Integer> entry : points_1st.entrySet()) {
             if((entry.getKey() != "Art") && (entry.getKey() != "PhyEdu")) {
                 if (entry.getValue() > 90) {
                     actGrade = "A";
@@ -70,7 +76,7 @@ public class Student {
                 } else if (entry.getValue() < 50) {
                     actGrade = "F";
                 }
-                grades.put(entry.getKey(), actGrade);
+                grades_1st.put(entry.getKey(), actGrade);
             }else if(entry.getValue() == 1){
                 actGrade = "very good";
             }else if(entry.getValue() == 2){
@@ -80,20 +86,60 @@ public class Student {
             }else if(entry.getValue() == 4){
                 actGrade = "not successful";
             }
-            grades.put(entry.getKey(), actGrade);
+            grades_1st.put(entry.getKey(), actGrade);
         }
     }
-    public String setAvgGrade() {
+    private void setGrade_2nd(){
+        String actGrade = "";
+        for(Map.Entry<String, Integer> entry : points_2nd.entrySet()) {
+            String key = entry.getKey();
+            Integer sumPoints = entry.getValue() + points_1st.get(key);
+            sumPoints /= 2;
+            if((entry.getKey() != "Art") && (entry.getKey() != "PhyEdu")) {
+                if (sumPoints > 90) {
+                    actGrade = "A";
+                } else if (sumPoints > 80) {
+                    actGrade = "B";
+                } else if (sumPoints > 70) {
+                    actGrade = "C";
+                } else if (sumPoints > 60) {
+                    actGrade = "D";
+                } else if (sumPoints > 50) {
+                    actGrade = "E";
+                } else if (sumPoints < 50) {
+                    actGrade = "F";
+                }
+
+            }else if(sumPoints == 1){
+                actGrade = "very good";
+            }else if(sumPoints == 2){
+                actGrade = "well done";
+            }else if(sumPoints == 3){
+                actGrade = "successful";
+            }else if(sumPoints == 4){
+                actGrade = "not successful";
+            }
+            grades_2nd.put(entry.getKey(), actGrade);
+        }
+    }
+
+    public String setAvgGrade(HashMap<String, Integer> points) {
         int totalPts = 0;
         int avgPts = 0;
         String actGrade = "";
+        Integer allPoints = 0;
         for (Map.Entry<String, Integer> entry : points.entrySet()) {
             if ((entry.getKey() != "Art") && (entry.getKey() != "PhyEdu")) {
-                totalPts += entry.getValue();
-                avgPts = totalPts / (points.size() - 2);
+                if (points == this.points_2nd) {
+                    String key = entry.getKey();
+                    allPoints = entry.getValue() + points_1st.get(key);
+                } else {
+                    allPoints = entry.getValue();
+                }
             }
         }
-            if (avgPts > 90) {
+        avgPts = totalPts / (points.size() - 2);
+        if (avgPts > 90) {
                 actGrade = "A";
             }else if (avgPts > 80) {
                 actGrade = "B";
@@ -107,6 +153,31 @@ public class Student {
                 actGrade = "F";
             }
         return actGrade;
+    }
+
+    public void setPoints_2nd(HashMap<String, Integer> points_2nd){
+        this.points_2nd = points_2nd;
+        setGrade_2nd();
+        setAvgGrade(points_2nd);
+    }
+    public void printReport(int i){
+        if(i == 1){
+            for (Map.Entry<String, String> entry : grades_1st.entrySet()) {
+                System.out.printf("%-15S" + "%-15S%n", entry.getKey(), entry.getValue());
+            }
+        }else if(i == 2){
+            for (Map.Entry<String, String> entry : grades_2nd.entrySet()) {
+                System.out.printf("%-15S" + "%-15S%n", entry.getKey(), entry.getValue());
+            }
+        }else
+            System.out.println("There are only 2 semesters!!! Input is only 1 or 2.");
+    }
+    public void printAvgGradeOfSemester(int i) {
+        if (i == 1) {
+            System.out.println("Average grade of semester " + i + " is " + avgGrade_1st);
+        } else if (i == 2) {
+            System.out.println("Average grade of semester " + i + " is " + avgGrade_2nd);
+        }
     }
 }
 
