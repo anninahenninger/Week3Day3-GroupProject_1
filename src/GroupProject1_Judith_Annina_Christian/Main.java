@@ -50,14 +50,14 @@ public class Main {
         pointsSt1.put("PhyEdu",99);
 
 
-        String [][][] sched1a = {{{"Math", "English", "Biology", "PhyEdu"},
-                                    {"Biology", "Physics", "Art", "Math"},
-                                    {"Geography", "Biology", "Physics", "Art"},
-                                    {"Physics", "Geography", "English", "Math"}},
-                                {{"Mr.Dark", "Mrs.Golightly","Mr. Sure","Mr.Strong"},
-                                  {"Mr.Nothappy","Mr. Just", "Mrs. Onpoint", "Mr. Brilliant"},
-                                  {"Mrs. Absolute", "Mrs. King","Mrs.Lord", "Mrs.Onpoint"},
-                                  {"Mr. Lord", "Mrs. Allknows", "Mr. Happy", "Mr. Dark"}}};
+        String [][][] sched1a = {{{"Math", "English", "Biology", "PhyEdu","PhyEdu"},
+                                    {"Biology", "Physics", "Art", "Math", "English"},
+                                    {"Geography", "Biology", "Physics", "Art", "Math"},
+                                    {"Physics", "Geography", "English", "Art", "Physics"}},
+                                {{"Mr.Dark", "Mrs.Golightly","Mr. Sure","Mr.Strong","Mr. Strong"},
+                                  {"Mr.Nothappy","Mr. Just", "Mrs. Onpoint", "Mr. Brilliant","Mr.Dark"},
+                                  {"Mrs. Absolute", "Mrs. King","Mrs.Lord", "Mrs.Onpoint","Mrs.King" },
+                                  {"Mr. Lord", "Mrs. Allknows", "Mr. Happy", "Mr. Dark", "Mr.Just"}}};
 
         String [][][] sched1b = {{{"English", "Biology", "PhyEdu", "Art"},
                                 {"Geography", "Biology", "Physics", "Art"},
