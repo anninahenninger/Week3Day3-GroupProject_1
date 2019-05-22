@@ -33,7 +33,7 @@ public class Main {
         pointsSt1.put("Art",78);
         pointsSt1.put("PhyEdu",78);
 
-        Student st1 = new Student("Benni", 7, new subjects, "benniParents@email.com", "Ada Cool", "Adam Cool");
+        Student st1 = new Student("Benni", 7, subjects, "benniParents@email.com", "Ada Cool", "Adam Cool");
 
 
     }

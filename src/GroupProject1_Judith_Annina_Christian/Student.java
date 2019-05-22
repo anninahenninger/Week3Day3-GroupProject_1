@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Student {
-    private ArrayList<String> subjects;
+    private String[] subjects;
     private HashMap<String, String> grades;
     private HashMap<String, Integer> points;
     private String email;
@@ -15,7 +15,7 @@ public class Student {
     private int age;
     private String avgGrade;
 
-    public Student(String name, int age, ArrayList<String> subjects, String email, String mommy,
+    public Student(String name, int age, String[] subjects, String email, String mommy,
                    String daddy){
         this.name = name;
         this.age = age;
