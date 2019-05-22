@@ -40,15 +40,23 @@ public class Main {
 
         String[] subjects = {"Math", "English", "Biology", "Geography", "Physics", "Art", "PhyEdu"};
 
-        HashMap<String, Integer> pointsSt1 = new HashMap<>();
-        pointsSt1.put("Math",78);
-        pointsSt1.put("English",45);
-        pointsSt1.put("Biology",88);
-        pointsSt1.put("Geography",57);
-        pointsSt1.put("Physics",74);
-        pointsSt1.put("Art",1);
-        pointsSt1.put("PhyEdu",1);
+        HashMap<String, Integer> pointsSt1_1st = new HashMap<>();
+        pointsSt1_1st.put("Math",78);
+        pointsSt1_1st.put("English",45);
+        pointsSt1_1st.put("Biology",88);
+        pointsSt1_1st.put("Geography",57);
+        pointsSt1_1st.put("Physics",74);
+        pointsSt1_1st.put("Art",1);
+        pointsSt1_1st.put("PhyEdu",1);
 
+        HashMap<String, Integer> pointsSt1_2nd = new HashMap<>();
+        pointsSt1_2nd.put("Math",81);
+        pointsSt1_2nd.put("English",72);
+        pointsSt1_2nd.put("Biology",90);
+        pointsSt1_2nd.put("Geography",63);
+        pointsSt1_2nd.put("Physics",94);
+        pointsSt1_2nd.put("Art",2);
+        pointsSt1_2nd.put("PhyEdu",1);
 
         String [][][] sched1a = {{{"Math", "English", "Biology", "PhyEdu","PhyEdu"},
                                 {"Biology", "Physics", "Art", "Math", "English"},
@@ -68,9 +76,9 @@ public class Main {
                                 {"Mr. Lord", "Mrs. Allknows", "Mr. Happy", "Mr. Dark"},
                                 {"Mr.Nothappy","Mr. Just", "Mrs. Onpoint", "Mr. Brilliant"}}};
 
-        Student st1 = new Student("Benni", 7, Student.Classroom.A1, sched1a, pointsSt1,
+        Student st1 = new Student("Benni", 7, Student.Classroom.A1, sched1a, pointsSt1_1st,
                 "benniParents@email.com", "Ada Cool", "Adam Cool");
-
+        
 
         st1.printSchedule();
     }
