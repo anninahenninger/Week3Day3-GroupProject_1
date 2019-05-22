@@ -46,8 +46,8 @@ public class Main {
         pointsSt1.put("Biology",88);
         pointsSt1.put("Geography",57);
         pointsSt1.put("Physics",74);
-        pointsSt1.put("Art",90);
-        pointsSt1.put("PhyEdu",99);
+        pointsSt1.put("Art",1);
+        pointsSt1.put("PhyEdu",1);
 
 
         String [][][] sched1a = {{{"Math", "English", "Biology", "PhyEdu","PhyEdu"},

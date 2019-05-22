@@ -56,20 +56,22 @@ public class Student {
     private void setGrade(){
         String actGrade = "";
         for(Map.Entry<String, Integer> entry : points.entrySet()) {
-            if (entry.getValue() > 90) {
-                actGrade = "A";
-            }else if (entry.getValue() > 80) {
-                actGrade = "B";
-            }else if (entry.getValue() > 70) {
-                actGrade = "C";
-            }else if (entry.getValue() > 60) {
-                actGrade = "D";
-            }else if (entry.getValue() > 50) {
-                actGrade = "E";
-            }else if (entry.getValue() < 50) {
-                actGrade = "F";
+            if((entry.getKey() != "Art") || (entry.getKey() != "PhyEdu")) {
+                if (entry.getValue() > 90) {
+                    actGrade = "A";
+                } else if (entry.getValue() > 80) {
+                    actGrade = "B";
+                } else if (entry.getValue() > 70) {
+                    actGrade = "C";
+                } else if (entry.getValue() > 60) {
+                    actGrade = "D";
+                } else if (entry.getValue() > 50) {
+                    actGrade = "E";
+                } else if (entry.getValue() < 50) {
+                    actGrade = "F";
+                }
+                grades.put(entry.getKey(), actGrade);
             }
-            grades.put(entry.getKey(), actGrade);
         }
     }
     public String setAvgGrade() {
