@@ -56,7 +56,7 @@ public class Student {
     private void setGrade(){
         String actGrade = "";
         for(Map.Entry<String, Integer> entry : points.entrySet()) {
-            if((entry.getKey() != "Art") || (entry.getKey() != "PhyEdu")) {
+            if((entry.getKey() != "Art") && (entry.getKey() != "PhyEdu")) {
                 if (entry.getValue() > 90) {
                     actGrade = "A";
                 } else if (entry.getValue() > 80) {
@@ -71,7 +71,16 @@ public class Student {
                     actGrade = "F";
                 }
                 grades.put(entry.getKey(), actGrade);
+            }else if(entry.getValue() == 1){
+                actGrade = "very good";
+            }else if(entry.getValue() == 2){
+                actGrade = "well done";
+            }else if(entry.getValue() == 3){
+                actGrade = "successful";
+            }else if(entry.getValue() == 4){
+                actGrade = "not successful";
             }
+            grades.put(entry.getKey(), actGrade);
         }
     }
     public String setAvgGrade() {
@@ -79,22 +88,24 @@ public class Student {
         int avgPts = 0;
         String actGrade = "";
         for (Map.Entry<String, Integer> entry : points.entrySet()) {
-            totalPts += entry.getValue();
-            avgPts = avgPts / points.size();
-            if (avgPts > 90) {
-                actGrade = "A";
-            }else if (entry.getValue() > 80) {
-                actGrade = "B";
-            }else if (entry.getValue() > 70) {
-                actGrade = "C";
-            }else if (entry.getValue() > 60) {
-                actGrade = "D";
-            }else if (entry.getValue() > 50) {
-                actGrade = "E";
-            }else if (entry.getValue() < 50) {
-                actGrade = "F";
+            if ((entry.getKey() != "Art") && (entry.getKey() != "PhyEdu")) {
+                totalPts += entry.getValue();
+                avgPts = totalPts / (points.size() - 2);
             }
         }
+            if (avgPts > 90) {
+                actGrade = "A";
+            }else if (avgPts > 80) {
+                actGrade = "B";
+            }else if (avgPts > 70) {
+                actGrade = "C";
+            }else if (avgPts > 60) {
+                actGrade = "D";
+            }else if (avgPts > 50) {
+                actGrade = "E";
+            }else if (avgPts < 50) {
+                actGrade = "F";
+            }
         return actGrade;
     }
 }
