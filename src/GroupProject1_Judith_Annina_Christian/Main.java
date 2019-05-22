@@ -13,11 +13,11 @@ public class Main {
         Teacher t4 = new Teacher("Mr. Happy", new String[]{"PhyEdu", "Geography", "English"});
         Teacher t5 = new Teacher("Mr. Gloriuous", new String[]{"Art", "Biology", "Geography"});
         Teacher t6 = new Teacher("Mr. Brilliant", new String[]{"English", "Math", "Art"});
-        Teacher t7 = new Teacher("Mrs. Absolute", new String[]{"PhyEdu", "Georgraphy", "Math"});
+        Teacher t7 = new Teacher("Mrs. Absolute", new String[]{"PhyEdu", "Geography", "Math"});
         Teacher t8 = new Teacher("Mrs. Lord", new String[]{"Art", "PhyEdu", "Physics"});
         Teacher t9 = new Teacher("Mrs. King", new String[]{"English", "Biology", "Physics"});
         Teacher t10 = new Teacher("Mrs. Allknows",new String[]{"PhyEdu", "Geography", "English"} );
-        Teacher t11 = new Teacher("Mrs. Onpoint", new String[]{"Biology", "Georgraphy", "Art"});
+        Teacher t11 = new Teacher("Mrs. Onpoint", new String[]{"Biology", "Geography", "Art"});
         Teacher t12 = new Teacher("Mrs. Strong", new String[]{"Physics", "PhyEdu", "Math"});
         Teacher t13 = new Teacher("Mr. Nothappy", new String[]{"Biology", "Math", "Physics"});
         Teacher t14 = new Teacher("Mr. Sure", new String[]{"Art", "Biology", "Math"});
@@ -35,6 +35,15 @@ public class Main {
 
         Student st1 = new Student("Benni", 7, subjects, "benniParents@email.com", "Ada Cool", "Adam Cool");
 
+        String [][][] sched1a = {{{"Math", "English", "Biology", "PhyEdu"},
+                                    {"Biology", "Physics", "Art", "Math"},
+                                    {"Geography", "Biology", "Physics", "Art"}
+                                    {"Physics", "Geography", "English", "Math"}},
+                                {{"Mr.Dark", "Mrs.Golightly","Mr. Sure","Mr.Strong"},
+                                  {"Mr.Nothappy","Mr. Just", "Mrs. Onpoint", "Mr. Brilliant"},
+                                  {"Mrs. Absolute", "Mrs. King","Mrs.Lord", "Mrs.Onpoint"},
+                                  {"Mr. Lord", "Mrs. Allknows", "Mr. Happy", "Mr. Dark"}}};
 
+        
     }
 }
