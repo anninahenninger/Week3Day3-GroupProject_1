@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class Teacher {
     private String teacherName;
-    private ArrayList<Subject>subject;
+    private Subject[]subject;
 
-    public Teacher(String teacherName, ArrayList<Subject>subject){
+    public Teacher(String teacherName, Subject[]subject){
         this.teacherName= teacherName;
         this.subject = subject;
     }
@@ -18,7 +18,7 @@ public class Teacher {
         this.teacherName=teacherName;
     }
 
-    public void setSubject(ArrayList<Subject> subject) {
+    public void setSubject(Subject[]subject) {
         this.subject = subject;
     }
 
