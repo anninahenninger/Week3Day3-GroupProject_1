@@ -28,6 +28,7 @@ public class Student {
         this.mommy = mommy;
         this.daddy = daddy;
         this.grades = new HashMap<>();
+        setGrade();
         this.avgGrade = setAvgGrade();
     }
 
@@ -57,20 +58,15 @@ public class Student {
         for(Map.Entry<String, Integer> entry : points.entrySet()) {
             if (entry.getValue() > 90) {
                 actGrade = "A";
-            }
-            if (entry.getValue() > 80) {
+            }else if (entry.getValue() > 80) {
                 actGrade = "B";
-            }
-            if (entry.getValue() > 90) {
+            }else if (entry.getValue() > 70) {
                 actGrade = "C";
-            }
-            if (entry.getValue() > 70) {
+            }else if (entry.getValue() > 60) {
                 actGrade = "D";
-            }
-            if (entry.getValue() > 60) {
+            }else if (entry.getValue() > 50) {
                 actGrade = "E";
-            }
-            if (entry.getValue() > 50) {
+            }else if (entry.getValue() < 50) {
                 actGrade = "F";
             }
             grades.put(entry.getKey(), actGrade);
@@ -85,20 +81,15 @@ public class Student {
             avgPts = avgPts / points.size();
             if (avgPts > 90) {
                 actGrade = "A";
-            }
-            if (entry.getValue() > 80) {
+            }else if (entry.getValue() > 80) {
                 actGrade = "B";
-            }
-            if (entry.getValue() > 90) {
+            }else if (entry.getValue() > 70) {
                 actGrade = "C";
-            }
-            if (entry.getValue() > 70) {
+            }else if (entry.getValue() > 60) {
                 actGrade = "D";
-            }
-            if (entry.getValue() > 60) {
+            }else if (entry.getValue() > 50) {
                 actGrade = "E";
-            }
-            if (entry.getValue() > 50) {
+            }else if (entry.getValue() < 50) {
                 actGrade = "F";
             }
         }

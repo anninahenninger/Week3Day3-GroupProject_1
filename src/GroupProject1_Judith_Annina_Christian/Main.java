@@ -51,13 +51,13 @@ public class Main {
 
 
         String [][][] sched1a = {{{"Math", "English", "Biology", "PhyEdu","PhyEdu"},
-                                    {"Biology", "Physics", "Art", "Math", "English"},
-                                    {"Geography", "Biology", "Physics", "Art", "Math"},
-                                    {"Physics", "Geography", "English", "Art", "Physics"}},
+                                {"Biology", "Physics", "Art", "Math", "English"},
+                                {"Geography", "Biology", "Physics", "Art", "Math"},
+                                {"Physics", "Geography", "English", "Art", "Physics"}},
                                 {{"Mr.Dark", "Mrs.Golightly","Mr. Sure","Mr.Strong","Mr. Strong"},
-                                  {"Mr.Nothappy","Mr. Just", "Mrs. Onpoint", "Mr. Brilliant","Mr.Dark"},
-                                  {"Mrs. Absolute", "Mrs. King","Mrs.Lord", "Mrs.Onpoint","Mrs.King" },
-                                  {"Mr. Lord", "Mrs. Allknows", "Mr. Happy", "Mr. Dark", "Mr.Just"}}};
+                                {"Mr.Nothappy","Mr. Just", "Mrs. Onpoint", "Mr. Brilliant","Mr.Dark"},
+                                {"Mrs. Absolute", "Mrs. King","Mrs.Lord", "Mrs.Onpoint","Mrs.King" },
+                                {"Mr. Lord", "Mrs. Allknows", "Mr. Happy", "Mr. Dark", "Mr.Just"}}};
 
         String [][][] sched1b = {{{"English", "Biology", "PhyEdu", "Art"},
                                 {"Geography", "Biology", "Physics", "Art"},
