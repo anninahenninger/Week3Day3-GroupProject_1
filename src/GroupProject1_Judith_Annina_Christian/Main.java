@@ -42,14 +42,13 @@ public class Main {
 
         HashMap<String, Integer> pointsSt1 = new HashMap<>();
         pointsSt1.put("Math",78);
-        pointsSt1.put("English",78);
-        pointsSt1.put("Biology",78);
-        pointsSt1.put("Geography",78);
-        pointsSt1.put("Physics",78);
-        pointsSt1.put("Art",78);
-        pointsSt1.put("PhyEdu",78);
+        pointsSt1.put("English",45);
+        pointsSt1.put("Biology",88);
+        pointsSt1.put("Geography",57);
+        pointsSt1.put("Physics",74);
+        pointsSt1.put("Art",90);
+        pointsSt1.put("PhyEdu",99);
 
-        Student st1 = new Student("Benni", 7, Student.Classroom.A1 ,subjects, "benniParents@email.com", "Ada Cool", "Adam Cool");
 
         String [][][] sched1a = {{{"Math", "English", "Biology", "PhyEdu"},
                                     {"Biology", "Physics", "Art", "Math"},
@@ -69,6 +68,10 @@ public class Main {
                                 {"Mr. Lord", "Mrs. Allknows", "Mr. Happy", "Mr. Dark"},
                                 {"Mr.Nothappy","Mr. Just", "Mrs. Onpoint", "Mr. Brilliant"}}};
 
-        
+        Student st1 = new Student("Benni", 7, Student.Classroom.A1, sched1a, pointsSt1,
+                "benniParents@email.com", "Ada Cool", "Adam Cool");
+
+
+        st1.printSchedule();
     }
 }

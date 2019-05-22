@@ -15,6 +15,7 @@ public class Schedule {
     }
 
     public Teacher teacherAbsent(Teacher teacher, int day){
-        if()
+        return teacher;
     }
+
 }

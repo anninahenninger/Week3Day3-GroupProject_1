@@ -9,28 +9,49 @@ public class Student {
     private String name;
     private int age;
     private Classroom aClassroom;
-    private String[] subjects;
+    private String[][][] schedule;
+    private HashMap<String, Integer> points;
     private String email;
     private String mommy;
     private String daddy;
     private HashMap<String, String> grades;
-    private HashMap<String, Integer> points;
-    private String avgGrade;
+    private String avgGrade = "";
 
-    public Student(String name, int age, Classroom aClassroom, String[] subjects, String email, String mommy, String daddy){
+    public Student(String name, int age, Classroom aClassroom, String[][][] schedule, HashMap<String, Integer> points,
+                   String email, String mommy, String daddy){
         this.name = name;
         this.age = age;
         this.aClassroom = aClassroom;
-        this.subjects = subjects;
+        this.schedule = schedule;
+        this.points = points;
         this.email = email;
         this.mommy = mommy;
         this.daddy = daddy;
         this.grades = new HashMap<>();
         this.avgGrade = setAvgGrade();
     }
-    public Student(HashMap<String, Integer> points){
-        this.points = points;
+
+    public void printSchedule(){
+        int counter = 7;
+        System.out.printf("%9s" + "%15s" + "%15s" + "%15s" + "%15s%n", "MON", "TUE", "WED", "THU", "FRI");
+        for (String[][] hour : this.schedule) {
+            for (String[] day : hour) {
+                if(counter < 11) {
+                    counter++;
+                    System.out.printf("%02d"  + ":00 ", counter);
+                }else{
+                    counter = 8;
+                    System.out.printf("%02d"  + ":00 ", counter);
+                }
+                for (String subject : day) {
+                    System.out.printf("%-15s", subject);
+                    }
+                System.out.println();
+            }
+            System.out.println("--------------------------------------------------------------------------------");
+        }
     }
+
     private void setGrade(){
         String actGrade = "";
         for(Map.Entry<String, Integer> entry : points.entrySet()) {
