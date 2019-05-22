@@ -5,20 +5,22 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Student {
-    private String[] subjects;
-    private HashMap<String, String> grades;
-    private HashMap<String, Integer> points;
-    private String email;
+    enum Classroom {A1, A2, A3, A4, B1, B2}
     private String name;
+    private int age;
+    private Classroom aClassroom;
+    private String[] subjects;
+    private String email;
     private String mommy;
     private String daddy;
-    private int age;
+    private HashMap<String, String> grades;
+    private HashMap<String, Integer> points;
     private String avgGrade;
 
-    public Student(String name, int age, String[] subjects, String email, String mommy,
-                   String daddy){
+    public Student(String name, int age, Classroom aClassroom, String[] subjects, String email, String mommy, String daddy){
         this.name = name;
         this.age = age;
+        this.aClassroom = aClassroom;
         this.subjects = subjects;
         this.email = email;
         this.mommy = mommy;

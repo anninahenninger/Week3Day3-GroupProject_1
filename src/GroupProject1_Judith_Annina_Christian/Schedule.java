@@ -4,12 +4,17 @@ import java.util.ArrayList;
 
 public class Schedule {
     private String[][][] schedule;
+    static private ArrayList<String> teachers = new ArrayList<>();
 
     public Schedule(String[][][] schedule){
         this.schedule= schedule;
     }
 
-    public Teacher teacherAbsent(Teacher teacher){
+    static public void setTeachers(ArrayList<String> teacher){
+        teachers = teacher;
+    }
 
+    public Teacher teacherAbsent(Teacher teacher, int day){
+        if()
     }
 }
