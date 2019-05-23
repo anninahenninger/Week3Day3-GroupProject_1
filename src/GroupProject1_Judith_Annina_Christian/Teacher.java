@@ -26,4 +26,5 @@ public class Teacher {
     public String[] getSubject(){
         return subjects;
     }
+
 }

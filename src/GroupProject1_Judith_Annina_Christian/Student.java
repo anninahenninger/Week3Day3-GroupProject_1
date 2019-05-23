@@ -183,23 +183,32 @@ public class Student {
         this.avgGrade_2nd = setAvgGrade_2nd();
     }
     public void printReport(int i){
+        System.out.println();
+        System.out.println(" Semester Report for "+ this.name+ ":");
+        System.out.println("***************************");
+        System.out.println();
         if(i == 1){
             for (Map.Entry<String, String> entry : grades_1st.entrySet()) {
                 System.out.printf("%-15S" + "%-15S%n", entry.getKey(), entry.getValue());
+                System.out.println("_________________________");
             }
         }else if(i == 2){
             for (Map.Entry<String, String> entry : grades_2nd.entrySet()) {
-                System.out.printf("%-15S" + "%-15S%n", entry.getKey(), entry.getValue());
+                System.out.printf("%-15S" + "|%-15S%n", entry.getKey(), entry.getValue());
+                System.out.println("__________________________");
             }
         }else
             System.out.println("There are only 2 semesters!!! Input is only 1 or 2.");
     }
     public void printAvgGradeOfSemester(int i) {
+
+        System.out.println();
         if (i == 1) {
-            System.out.println("Average grade of semester " + i + " is " + avgGrade_1st);
+            System.out.println("Average grade of semester " + i + " is " + avgGrade_1st+". ");
         } else if (i == 2) {
-            System.out.println("Average grade of semester " + i + " is " + avgGrade_2nd);
+            System.out.println("AVERAGE GRADE OF SEMESTER " + i + " IS " + avgGrade_2nd+ ". ");
         }
+
     }
 }
 
