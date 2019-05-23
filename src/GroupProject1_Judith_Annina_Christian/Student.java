@@ -34,8 +34,8 @@ public class Student {
         this.points_2nd = new HashMap<>();
         this.grades_2nd = new HashMap<>();
         setGrade_2nd();
-        this.avgGrade_1st = setAvgGrade(this.points_1st);
-        this.avgGrade_2nd = setAvgGrade(this.points_2nd);
+        this.avgGrade_1st = setAvgGrade_1st();
+        this.avgGrade_2nd = setAvgGrade_2nd();
     }
 
     public void printSchedule(){
@@ -123,22 +123,17 @@ public class Student {
         }
     }
 
-    public String setAvgGrade(HashMap<String, Integer> points) {
-        int totalPts = 0;
+    public String setAvgGrade_1st() {
         int avgPts = 0;
         String actGrade = "";
         Integer allPoints = 0;
-        for (Map.Entry<String, Integer> entry : points.entrySet()) {
+        for (Map.Entry<String, Integer> entry : this.points_1st.entrySet()) {
             if ((entry.getKey() != "Art") && (entry.getKey() != "PhyEdu")) {
-                if (points == this.points_2nd) {
-                    String key = entry.getKey();
-                    allPoints = entry.getValue() + points_1st.get(key);
-                } else {
-                    allPoints = entry.getValue();
-                }
+                allPoints += entry.getValue();
             }
         }
-        avgPts = totalPts / (points.size() - 2);
+
+        avgPts = allPoints / (this.points_1st.size() - 2);
         if (avgPts > 90) {
                 actGrade = "A";
             }else if (avgPts > 80) {
@@ -154,11 +149,38 @@ public class Student {
             }
         return actGrade;
     }
+    public String setAvgGrade_2nd() {
+        int avgPts = 0;
+        String actGrade = "";
+        Integer allPoints = 0;
+        for (Map.Entry<String, Integer> entry : points_2nd.entrySet()) {
+            if ((entry.getKey() != "Art") && (entry.getKey() != "PhyEdu")) {
+                String key = entry.getKey();
+                allPoints += entry.getValue() + points_1st.get(key);
+
+            }
+        }
+        avgPts = allPoints / (points_2nd.size() - 2) / 2;
+        if (avgPts > 90) {
+            actGrade = "A";
+        }else if (avgPts > 80) {
+            actGrade = "B";
+        }else if (avgPts > 70) {
+            actGrade = "C";
+        }else if (avgPts > 60) {
+            actGrade = "D";
+        }else if (avgPts > 50) {
+            actGrade = "E";
+        }else if (avgPts < 50) {
+            actGrade = "F";
+        }
+        return actGrade;
+    }
 
     public void setPoints_2nd(HashMap<String, Integer> points_2nd){
         this.points_2nd = points_2nd;
         setGrade_2nd();
-        setAvgGrade(points_2nd);
+        this.avgGrade_2nd = setAvgGrade_2nd();
     }
     public void printReport(int i){
         if(i == 1){
