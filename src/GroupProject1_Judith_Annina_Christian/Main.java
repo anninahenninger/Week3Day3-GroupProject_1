@@ -84,5 +84,6 @@ public class Main {
         //st1.printSchedule();
         st1.printReport(2);
         st1.printAvgGradeOfSemester(2);
+        System.out.println("christian test");
     }
 }
