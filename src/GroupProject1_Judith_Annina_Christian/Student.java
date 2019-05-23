@@ -212,7 +212,7 @@ public class Student {
         if (i == 1) {
             System.out.println("Average grade of semester " + i + " is " + avgGrade_1st + ". ");
         } else if (i == 2) {
-            System.out.println("AVERAGE GRADE OF SEMESTER " + i + " IS " + avgGrade_2nd + ". ");
+            System.out.println("AVERAGE GRADE OF YEAR IS " + avgGrade_2nd + ". ");
         }
     }
 
@@ -241,7 +241,7 @@ public class Student {
                 }
             }
             System.out.printf("where he\nhas gotten an F?\n" + "That was YOUR job - we provided you with books and locked " +
-                    "your kid for 6 hours a day, so\nyou can earn money to spend it on the afternoon teachers. " +
+                    "your kid for 4 hours a day, so\nyou can earn money to spend it on the afternoon teachers. " +
                     "Why didn’t you do your job on time?\nShame. Shame. Shame: \n" +
                     "(oh, yeah, btw, here is a contact list of institutions and people that can provide you" +
                     " with\nextra help - maybe some of our fellow teachers works there, maybe not):\n");

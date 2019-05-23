@@ -14,8 +14,8 @@ public class Schedule {
         teachers = teacher;
     }
 
-    public Teacher teacherAbsent(Teacher teacher, int day){
+    /*public Teacher teacherAbsent(Teacher teacher, int day){
         return teacher;
-    }
+    } not used */
 
 }

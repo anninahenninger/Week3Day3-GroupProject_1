@@ -21,7 +21,8 @@ public class Main {
         Teacher t12 = new Teacher("Mrs. Strong", new String[]{"Physics", "PhyEdu", "Math"});
         Teacher t13 = new Teacher("Mr. Nothappy", new String[]{"Biology", "Math", "Physics"});
         Teacher t14 = new Teacher("Mr. Sure", new String[]{"Art", "Biology", "Math"});
-        ArrayList<Teacher> teachers = new ArrayList<>();
+
+        ArrayList<Teacher> teachers = new ArrayList<>();//object 'Teacher' is turned in an arraylist
         teachers.add(t1);
         teachers.add(t2);
         teachers.add(t3);
@@ -80,13 +81,13 @@ public class Main {
                 "benniParents@email.com", "Ada Cool", "Adam Cool");
 
 
-        st1.setPoints_2nd(pointsSt1_2nd);
+        st1.setPoints_2nd(pointsSt1_2nd); //second Semester points which get passed to setPoints_2nd()
 
-        //st1.printSchedule();
+        //st1.printSchedule();//prints out schedule for Student 1 (Benni)
 
-        //st1.printReport(2);
-        //st1.printAvgGradeOfSemester(2);
-        st1.checkIfLoser(teachers);
+        //st1.printReport(2);//index 2 references to full year Report - exchange with 1 to get first semester
+        //st1.printAvgGradeOfSemester(2);//year average Grade
+        //st1.checkIfLoser(teachers);
 
     }
 }
