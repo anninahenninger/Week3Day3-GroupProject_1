@@ -79,6 +79,7 @@ public class Main {
         Student st1 = new Student("Benni", 7, Student.Classroom.A1, sched1a, pointsSt1_1st,
                 "benniParents@email.com", "Ada Cool", "Adam Cool");
 
+
         st1.setPoints_2nd(pointsSt1_2nd);
 
         //st1.printSchedule();

@@ -15,15 +15,15 @@ public class Teacher {
     public void setTeacherName(String teacherName) {
         this.teacherName = teacherName;
     }
-    public void getTeacherName(){
-        this.teacherName=teacherName;
+    public String getTeacherName(){
+        return teacherName;
     }
 
     public void setSubject(String[] subjects) {
         this.subjects = subjects;
     }
 
-    public void getSubject(){
-        this.subjects = subjects;
+    public String[] getSubject(){
+        return subjects;
     }
 }
