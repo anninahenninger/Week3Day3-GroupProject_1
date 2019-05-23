@@ -45,16 +45,16 @@ public class Main {
         pointsSt1_1st.put("English",45);
         pointsSt1_1st.put("Biology",88);
         pointsSt1_1st.put("Geography",57);
-        pointsSt1_1st.put("Physics",74);
+        pointsSt1_1st.put("Physics",30);
         pointsSt1_1st.put("Art",1);
         pointsSt1_1st.put("PhyEdu",1);
 
         HashMap<String, Integer> pointsSt1_2nd = new HashMap<>();
         pointsSt1_2nd.put("Math",99);
-        pointsSt1_2nd.put("English",72);
+        pointsSt1_2nd.put("English",20);
         pointsSt1_2nd.put("Biology",40);
         pointsSt1_2nd.put("Geography",63);
-        pointsSt1_2nd.put("Physics",94);
+        pointsSt1_2nd.put("Physics",49);
         pointsSt1_2nd.put("Art",4);
         pointsSt1_2nd.put("PhyEdu",1);
 
@@ -84,8 +84,9 @@ public class Main {
 
         //st1.printSchedule();
 
-        st1.printReport(2);
-        st1.printAvgGradeOfSemester(2);
+        //st1.printReport(2);
+        //st1.printAvgGradeOfSemester(2);
+        st1.checkIfLoser(teachers);
 
     }
 }
