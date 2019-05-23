@@ -75,7 +75,7 @@ public class Student {
                     actGrade = "D";
                 } else if (entry.getValue() > 50) {
                     actGrade = "E";
-                } else if (entry.getValue() < 50) {
+                } else if (entry.getValue() <= 50) {
                     actGrade = "F";
                 }
                 grades_1st.put(entry.getKey(), actGrade);
@@ -109,7 +109,7 @@ public class Student {
                     actGrade = "D";
                 } else if (sumPoints > 50) {
                     actGrade = "E";
-                } else if (sumPoints < 50) {
+                } else if (sumPoints <= 50) {
                     actGrade = "F";
                 }
 
@@ -147,7 +147,7 @@ public class Student {
             actGrade = "D";
         } else if (avgPts > 50) {
             actGrade = "E";
-        } else if (avgPts < 50) {
+        } else if (avgPts <= 50) {
             actGrade = "F";
         }
         return actGrade;
@@ -175,7 +175,7 @@ public class Student {
             actGrade = "D";
         } else if (avgPts > 50) {
             actGrade = "E";
-        } else if (avgPts < 50) {
+        } else if (avgPts <= 50) {
             actGrade = "F";
         }
         return actGrade;
@@ -187,17 +187,17 @@ public class Student {
         this.avgGrade_2nd = setAvgGrade_2nd();
     }
 
-    public void printReport(int i) {
+    public void printReport(int semester) {
         System.out.println();
         System.out.println(" Semester Report for " + this.name + ":");
         System.out.println("***************************");
         System.out.println();
-        if (i == 1) {
+        if (semester == 1) {
             for (Map.Entry<String, String> entry : grades_1st.entrySet()) {
                 System.out.printf("%-15S" + "%-15S%n", entry.getKey(), entry.getValue());
                 System.out.println("_________________________");
             }
-        } else if (i == 2) {
+        } else if (semester == 2) {
             for (Map.Entry<String, String> entry : grades_2nd.entrySet()) {
                 System.out.printf("%-15S" + "|%-15S%n", entry.getKey(), entry.getValue());
                 System.out.println("__________________________");
@@ -206,12 +206,12 @@ public class Student {
             System.out.println("There are only 2 semesters!!! Input is only 1 or 2.");
     }
 
-    public void printAvgGradeOfSemester(int i) {
+    public void printAvgGradeOfSemester(int semester) {
 
         System.out.println();
-        if (i == 1) {
-            System.out.println("Average grade of semester " + i + " is " + avgGrade_1st + ". ");
-        } else if (i == 2) {
+        if (semester == 1) {
+            System.out.println("Average grade of semester " + semester + " is " + avgGrade_1st + ". ");
+        } else if (semester == 2) {
             System.out.println("AVERAGE GRADE OF YEAR IS " + avgGrade_2nd + ". ");
         }
     }
@@ -240,7 +240,7 @@ public class Student {
                     System.out.printf("and " + "%S" + " ", entry.getKey());
                 }
             }
-            System.out.printf("where he\nhas gotten an F?\n" + "That was YOUR job - we provided you with books and locked " +
+            System.out.print("where he\nhas gotten an F?\n" + "That was YOUR job - we provided you with books and locked " +
                     "your kid for 4 hours a day, so\nyou can earn money to spend it on the afternoon teachers. " +
                     "Why didn’t you do your job on time?\nShame. Shame. Shame: \n" +
                     "(oh, yeah, btw, here is a contact list of institutions and people that can provide you" +

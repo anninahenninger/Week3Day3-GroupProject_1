@@ -204,16 +204,49 @@ public class Main {
                                 {"Mr. Lord", "Mrs. Allknows", "Mr. Happy", "Mr. Dark"},
                                 {"Mr.Nothappy","Mr. Just", "Mrs. Onpoint", "Mr. Brilliant"}}};
 
+        String [][][] sched2a = {{{"Biology", "Biology", "PhyEdu", "Art"},
+                                {"Geography", "Physics", "Math", "Art"},
+                                {"Physics", "Geography", "English", "Math"},
+                                {"Art", "Physics", "Biology", "Math"}},
+                                {{"Mrs. Absolute", "Mrs. Queen","Mrs.Lord", "Mrs.Onpoint"},
+                                {"Mr.Happy", "Mrs.Star","Mr. Sureright","Mr.Week"},
+                                {"Mr. Lord", "Mrs. Sad", "Mr. Happy", "Mr. Green"},
+                                {"Mr.Nothappyatall","Mr. Fair", "Mrs. Fast", "Mr. Fantastic"}}};
+
+        String [][][] sched2b = {{{"English", "Biology", "PhyEdu", "Art"},
+                                {"Geography", "Biology", "Physics", "Art"},
+                                {"Physics", "Geography", "English", "Math"},
+                                {"Biology", "Physics", "Art", "Math"}},
+                                {{"Mrs. Absolute", "Mrs. King","Mrs.Lord", "Mrs.Onpoint"},
+                                {"Mr.Dark", "Mrs.Golightly","Mr. Sure","Mr.Strong"},
+                                {"Mr. Lord", "Mrs. Allknows", "Mr. Happy", "Mr. Dark"},
+                                {"Mr.Nothappy","Mr. Just", "Mrs. Onpoint", "Mr. Brilliant"}}};
+
+
         Student st1 = new Student("Benni", 7, Student.Classroom.A1, sched1a, pointsSt1_1st,
                 "benniParents@email.com", "Ada Cool", "Adam Cool");
+        Student st2 = new Student ("Jenny",8, Student.Classroom.A1, sched1a,pointsSt2_1st,
+                "Jenny.ara.hptmail.com","Mama Ara","Papa Ara" );
+        Student st3 = new Student("Laura",9, Student.Classroom.A1, sched1b, pointsSt3_1st,
+                "Laura.sim@hotmail.com", "Goa Sim", "Gingy Sim");
+        Student st4 = new Student ("Sebastian",7, Student.Classroom.A1, sched1a, pointsSt4_1st,
+                "Sebastian.sala@hotmail.com", "Gara Sala", "Papa Sala");
+        Student st5 = new Student("Lala", 7, Student.Classroom.A1, sched2a, pointsSt5_1st,
+                "LalaParents@email.com", "Ada Grey", "Adam Grey");
+        Student st6 = new Student("Ben", 8, Student.Classroom.A1, sched2a, pointsSt6_1st,
+                "benlargo@email.com", "Rima Largo", "Adam Largo");
+        Student st7 = new Student("Toni", 9, Student.Classroom.A1, sched2b, pointsSt7_1st,
+                "tonilahm@email.com", "Haha Happy", "Hihi Happy");
+        Student st8 = new Student("Jim", 7, Student.Classroom.A1, sched2b, pointsSt8_1st,
+                "jimfans@email.com", "Melani Fans", "Adam Fans");
 
 
-        st1.setPoints_2nd(pointsSt1_2nd); //second Semester points which get passed to setPoints_2nd()
+        //st1.printSchedule();              //prints out schedule for Student 1 (Benni)
 
-        //st1.printSchedule();//prints out schedule for Student 1 (Benni)
+        st1.setPoints_2nd(pointsSt1_2nd);   //second Semester points which get passed to setPoints_2nd()
 
-        //st2.printReport(2);//index 2 references to full year Report - exchange with 1 to get first semester
-        //st1.printAvgGradeOfSemester(2);//year average Grade
+        //st1.printReport(1);               //index 2 references to full year Report - exchange with 1 to get first semester
+        //st1.printAvgGradeOfSemester(1);   //year average Grade
         //st1.checkIfLoser(teachers);
 
     }
