@@ -59,6 +59,133 @@ public class Main {
         pointsSt1_2nd.put("Art",4);
         pointsSt1_2nd.put("PhyEdu",1);
 
+        HashMap<String, Integer> pointsSt2_1st = new HashMap<>();
+        pointsSt2_1st.put("Math",90);
+        pointsSt2_1st.put("English", 80);
+        pointsSt2_1st.put("Biology",80);
+        pointsSt2_1st.put("Geography", 60);
+        pointsSt2_1st.put("Physics", 90);
+        pointsSt2_1st.put("Art", 1);
+        pointsSt2_1st.put("PhyEdu", 2);
+
+        HashMap<String, Integer> pointsSt2_2nd = new HashMap<>();
+        pointsSt2_2nd.put("Math", 92);
+        pointsSt2_2nd.put("English", 83);
+        pointsSt2_2nd.put("Biology", 81);
+        pointsSt2_2nd.put("Geography", 82);
+        pointsSt2_2nd.put("Physics", 100);
+        pointsSt2_2nd.put("Art", 2);
+        pointsSt2_2nd.put("PhyEdu", 3);
+
+        HashMap<String, Integer> pointsSt3_1st = new HashMap<>();
+        pointsSt3_1st.put("Math", 100);
+        pointsSt3_1st.put("English", 79);
+        pointsSt3_1st.put("Biology", 79);
+        pointsSt3_1st.put("Geography", 59);
+        pointsSt3_1st.put("Physics", 99);
+        pointsSt3_1st.put("Art", 2);
+        pointsSt3_1st.put("PhyEdu", 4);
+
+        HashMap<String, Integer> pointsSt3_2nd = new HashMap<>();
+        pointsSt3_2nd.put("Math", 90);
+        pointsSt3_2nd.put("English",80);
+        pointsSt3_2nd.put("Biology", 80);
+        pointsSt3_2nd.put("Geography", 57);
+        pointsSt3_2nd.put("Physics", 100);
+        pointsSt3_2nd.put("Art", 2);
+        pointsSt3_2nd.put("PhyEdu", 4);
+
+        HashMap<String, Integer> pointsSt4_1st = new HashMap<>();
+        pointsSt4_1st.put("Math", 89);
+        pointsSt4_1st.put("English", 82);
+        pointsSt4_1st.put("Biology", 79);
+        pointsSt4_1st.put("Geography", 53);
+        pointsSt4_1st.put("Physics", 99);
+        pointsSt4_1st.put("Art", 3);
+        pointsSt4_1st.put("PhyEdu", 4);
+
+        HashMap<String, Integer> pointsSt4_2nd = new HashMap<>();
+        pointsSt4_2nd.put("Math", 90);
+        pointsSt4_2nd.put("English", 80);
+        pointsSt4_2nd.put("Biology", 80);
+        pointsSt4_2nd.put("Geography", 50);
+        pointsSt4_2nd.put("Physics", 100);
+        pointsSt4_2nd.put("Art", 3);
+        pointsSt4_2nd.put("PhyEdu", 4);
+
+        HashMap<String, Integer> pointsSt5_1st = new HashMap<>();
+        pointsSt5_1st.put("Math", 93);
+        pointsSt5_1st.put("English", 81);
+        pointsSt5_1st.put("Biology", 78);
+        pointsSt5_1st.put("Geography", 49);
+        pointsSt5_1st.put("Physics", 99);
+        pointsSt5_1st.put("Art", 3);
+        pointsSt5_1st.put("PhyEdu", 4);
+
+        HashMap<String, Integer> pointsSt5_2nd = new HashMap<>();
+        pointsSt5_2nd.put("Math", 100);
+        pointsSt5_2nd.put("English", 78);
+        pointsSt5_2nd.put("Biology", 77);
+        pointsSt5_2nd.put("Geography", 40);
+        pointsSt5_2nd.put("Physics", 89);
+        pointsSt5_2nd.put("Art", 2);
+        pointsSt5_2nd.put("PhyEdu", 1);
+
+        HashMap<String, Integer> pointsSt6_1st = new HashMap<>();
+        pointsSt6_1st.put("Math", 99);
+        pointsSt6_1st.put("English", 74);
+        pointsSt6_1st.put("Biology", 70);
+        pointsSt6_1st.put("Geography", 39);
+        pointsSt6_1st.put("Physics", 82);
+        pointsSt6_1st.put("Art", 3);
+        pointsSt6_1st.put("PhyEdu", 4);
+
+        HashMap<String, Integer> pointsSt6_2nd = new HashMap<>();
+        pointsSt6_2nd.put("Math", 100);
+        pointsSt6_2nd.put("English", 70);
+        pointsSt6_2nd.put("Biology", 69);
+        pointsSt6_2nd.put("Geography",40);
+        pointsSt6_2nd.put("Physics", 80);
+        pointsSt6_2nd.put("Art", 3);
+        pointsSt6_2nd.put("PhyEdu", 2);
+
+
+        HashMap<String, Integer> pointsSt7_1st = new HashMap<>();
+        pointsSt7_1st.put("Math", 100);
+        pointsSt7_1st.put("English", 70);
+        pointsSt7_1st.put("Biology", 69);
+        pointsSt7_1st.put("Geography",40);
+        pointsSt7_1st.put("Physics", 80);
+        pointsSt7_1st.put("Art", 2);
+        pointsSt7_1st.put("PhyEdu", 2);
+
+        HashMap<String, Integer> pointsSt7_2nd = new HashMap<>();
+        pointsSt7_2nd.put("Math", 100);
+        pointsSt7_2nd.put("English", 70);
+        pointsSt7_2nd.put("Biology", 69);
+        pointsSt7_2nd.put("Geography",40);
+        pointsSt7_2nd.put("Physics", 80);
+        pointsSt7_2nd.put("Art", 3);
+        pointsSt7_2nd.put("PhyEdu", 1);
+
+        HashMap<String, Integer> pointsSt8_1st = new HashMap<>();
+        pointsSt8_1st.put("Math", 100);
+        pointsSt8_1st.put("English", 70);
+        pointsSt8_1st.put("Biology", 69);
+        pointsSt8_1st.put("Geography",40);
+        pointsSt8_1st.put("Physics", 80);
+        pointsSt8_1st.put("Art", 2);
+        pointsSt8_1st.put("PhyEdu", 1);
+
+        HashMap<String, Integer> pointsSt8_2nd = new HashMap<>();
+        pointsSt8_2nd.put("Math", 100);
+        pointsSt8_2nd.put("English", 70);
+        pointsSt8_2nd.put("Biology", 69);
+        pointsSt8_2nd.put("Geography",40);
+        pointsSt8_2nd.put("Physics", 80);
+        pointsSt8_2nd.put("Art", 2);
+        pointsSt8_2nd.put("PhyEdu", 4);
+
         String [][][] sched1a = {{{"Math", "English", "Biology", "PhyEdu","PhyEdu"},
                                 {"Biology", "Physics", "Art", "Math", "English"},
                                 {"Geography", "Biology", "Physics", "Art", "Math"},
@@ -85,7 +212,7 @@ public class Main {
 
         //st1.printSchedule();//prints out schedule for Student 1 (Benni)
 
-        //st1.printReport(2);//index 2 references to full year Report - exchange with 1 to get first semester
+        //st2.printReport(2);//index 2 references to full year Report - exchange with 1 to get first semester
         //st1.printAvgGradeOfSemester(2);//year average Grade
         //st1.checkIfLoser(teachers);
 
